@@ -1,0 +1,20 @@
+sudo: false
+
+language: php
+
+php:
+  - 7.0
+  - 7.1
+  - 7.2
+  - 7.3
+  - nightly
+
+matrix:
+  allow_failures:
+    - php: nightly
+  fast_finish: true
+
+script:
+  - cat /etc/hosts
+  - cat /etc/resolv.conf
+
